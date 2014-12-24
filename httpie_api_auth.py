@@ -17,9 +17,7 @@ class ApiAuth:
     def __call__(self, r):
         content_type = r.headers.get('content-type')
         if not content_type:
-            # Something in my Rails stack is injecting text/plain even when I
-            # send an empty Content-Type header. Hack around it for now.
-            content_type = 'text/plain'
+            content_type = ''
 
         content_md5  = r.headers.get('content-md5')
         if not content_md5:
