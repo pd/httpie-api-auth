@@ -5,15 +5,15 @@ except ImportError:
     pass
 
 setup(
-    name='httpie-api_auth',
+    name='httpie-api-auth',
     description='ApiAuth plugin for HTTPie.',
     long_description=open('README.rst').read().strip(),
     version='0.1.0',
     author='Kyle Hargraves',
     author_email='pd@krh.me',
     license='MIT',
-    url='https://github.com/pd/httpie-api_auth',
-    download_url='https://github.com/pd/httpie-api_auth',
+    url='https://github.com/pd/httpie-api-auth',
+    download_url='https://github.com/pd/httpie-api-auth',
     py_modules=['httpie_api_auth'],
     zip_safe=False,
     entry_points={

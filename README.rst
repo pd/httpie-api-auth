@@ -1,4 +1,4 @@
-httpie-api_auth
+httpie-api-auth
 ===============
 
 `ApiAuth <https://github.com/mgomes/api_auth>`_ auth plugin for `HTTPie <https://github.com/jkbr/httpie>`_.
@@ -8,7 +8,7 @@ Installation
 
 .. code-block:: bash
 
-    $ pip install httpie-api_auth
+    $ pip install httpie-api-auth
 
 You should now see ``api-auth`` under ``--auth-type`` in ``$ http --help`` output.
 

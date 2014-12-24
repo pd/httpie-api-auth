@@ -40,7 +40,7 @@ class ApiAuth:
 class ApiAuthPlugin(AuthPlugin):
 
     name = 'ApiAuth auth'
-    auth_type = 'api'
+    auth_type = 'api-auth'
     description = 'Sign requests using the ApiAuth authentication method'
 
     def get_auth(self, access_id, secret_key):
