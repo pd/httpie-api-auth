@@ -10,11 +10,11 @@ Installation
 
     $ pip install httpie-api_auth
 
-You should now see ``api`` under ``--auth-type`` in ``$ http --help`` output.
+You should now see ``api-auth`` under ``--auth-type`` in ``$ http --help`` output.
 
 Usage
 -----
 
 .. code-block:: bash
 
-    $ http --auth-type=api --auth='access_id:secret_key' example.org
+    $ http --auth-type=api-auth --auth='access_id:secret_key' example.org

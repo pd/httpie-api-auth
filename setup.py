@@ -25,8 +25,9 @@ setup(
         'httpie>=0.7.0'
     ],
     classifiers=[
-        'Development Status :: 5 - Production/Stable',
+        'Development Status :: 4 - Beta',
         'Programming Language :: Python',
+        'Intended Audience :: Developers',
         'Environment :: Plugins',
         'License :: OSI Approved :: MIT License',
         'Topic :: Internet :: WWW/HTTP',
