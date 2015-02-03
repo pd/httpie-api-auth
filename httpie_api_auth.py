@@ -29,7 +29,11 @@ class ApiAuth:
             httpdate = now.strftime('%a, %d %b %Y %H:%M:%S GMT')
             r.headers['Date'] = httpdate
 
-        path = urlparse.urlparse(r.url).path
+        url  = urlparse.urlparse(r.url)
+        path = url.path
+        if url.query:
+          path = path + '?' + url.query
+
         string_to_sign = '%s,%s,%s,%s' % (content_type, content_md5, path, httpdate)
         digest = hmac.new(self.secret_key, string_to_sign, hashlib.sha1).digest()
         signature = base64.encodestring(digest)
