@@ -3,7 +3,12 @@ ApiAuth auth plugin for HTTPie.
 
 """
 from httpie.plugins import AuthPlugin
-import hmac, base64, hashlib, datetime, urlparse
+import hmac, base64, hashlib, datetime
+
+try:
+    import urlparse
+except ImportError:
+    import urllib.parse
 
 __version__ = '0.1.0'
 __author__ = 'Kyle Hargraves'
