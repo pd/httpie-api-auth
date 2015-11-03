@@ -17,7 +17,7 @@ __licence__ = 'MIT'
 class ApiAuth:
     def __init__(self, access_id, secret_key):
         self.access_id = access_id
-        self.secret_key = secret_key
+        self.secret_key = secret_key.encode('ascii')
 
     def __call__(self, r):
         content_type = r.headers.get('content-type')
