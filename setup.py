@@ -8,7 +8,7 @@ setup(
     name='httpie-api-auth',
     description='ApiAuth plugin for HTTPie.',
     long_description=open('README.rst').read().strip(),
-    version='0.2.0',
+    version='0.2.1',
     author='Kyle Hargraves',
     author_email='pd@krh.me',
     license='MIT',
