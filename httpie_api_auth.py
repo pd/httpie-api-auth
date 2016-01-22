@@ -10,7 +10,7 @@ try:
 except ImportError:
     import urllib.parse
 
-__version__ = '0.2.1'
+__version__ = '0.3.0'
 __author__ = 'Kyle Hargraves'
 __licence__ = 'MIT'
 
@@ -20,6 +20,8 @@ class ApiAuth:
         self.secret_key = secret_key.encode('ascii')
 
     def __call__(self, r):
+        method = r.method.upper()
+
         content_type = r.headers.get('content-type')
         if not content_type:
             content_type = ''
@@ -39,7 +41,7 @@ class ApiAuth:
         if url.query:
           path = path + '?' + url.query
 
-        string_to_sign = '%s,%s,%s,%s' % (content_type, content_md5, path, httpdate)
+        string_to_sign = '%s,%s,%s,%s,%s' % (method, content_type, content_md5, path, httpdate)
         digest = hmac.new(self.secret_key, string_to_sign, hashlib.sha1).digest()
         signature = base64.encodestring(digest).rstrip()
 
