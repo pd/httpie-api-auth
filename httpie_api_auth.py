@@ -10,7 +10,7 @@ try:
 except ImportError:
     import urllib.parse
 
-__version__ = '0.1.0'
+__version__ = '0.2.1'
 __author__ = 'Kyle Hargraves'
 __licence__ = 'MIT'
 
