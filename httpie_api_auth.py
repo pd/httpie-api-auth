@@ -10,7 +10,7 @@ try:
 except ImportError:
     import urllib.parse
 
-__version__ = '0.3.0'
+__version__ = '0.3.1'
 __author__ = 'Kyle Hargraves'
 __licence__ = 'MIT'
 
@@ -54,5 +54,5 @@ class ApiAuthPlugin(AuthPlugin):
     auth_type = 'api-auth'
     description = 'Sign requests using the ApiAuth authentication method'
 
-    def get_auth(self, access_id, secret_key):
+    def get_auth(self, access_id=None, secret_key=None):
         return ApiAuth(access_id, secret_key)
