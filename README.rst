@@ -1,3 +1,7 @@
+Archived
+========
+*NOTE*: This project is dead. A theoretically maintained fork lives at `enova/httpie-api-auth <https://github.com/enova/httpie-api-auth>`_.
+
 httpie-api-auth
 ===============
 
